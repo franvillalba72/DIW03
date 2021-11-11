@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-image: url(../img/plano.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+#menu-navegacion a {
+    color: #fff;
+    margin: 0 1em 0 1em;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.boton {
+    padding: 1em 2em;
+    border-radius: .3em;
+    color: #1f313d;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.caja-capas {
+    padding: 1em 2em;
+    border-radius: .3em;
+    box-shadow: 0.5em 0.5em 1.5em #1f313d;
+    width: 20em;
+    height: 30em;
+    margin: 2em 1em;
+}
+
+.logo{
+    width: 204px;
+    height: 45px;
+}
+
+.derechos {
+    font-size: 14px;
+    color: #fff;
+}
+
+.m1em{
+    margin: 1em;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.flex-item-centrado
+{
+    align-items: center;
+}
+
+.flex-espaciado {
+    justify-content: space-around;
+}
+
+.texto-blanco{
+    color: #fff;
+}
+
+.fondo-oscuro{
+    background-color: #1f313d;    
+}
+
+.fondo-claro{
+    background-color: #e5e9ed;
+}
+
+.fondo-gris{
+    background-color: #aeb9c5;
+}
+
+.fondo-capas{
+    background-color: #e7e7e7;
+}
