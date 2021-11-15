@@ -2,36 +2,122 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Francisco Villalba Garcia" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartagena Survivors</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a los estilos css -->
+    <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Favicon para la página -->
 </head>
 <body>
+    <!--
+        Encabezado de la pagina que va a estar fijo en la parte superior por la etiqueta header definida en css.
+        Como clases le asigno las siguientes:
+        .fondo-oscuro : Para que tenga el color que he definido con esa clase
+        .flex-row : Para que su contenido use flexbox con una distribución en linea
+        .flex-item-centrado : Para que el contenido se alinee de forma vertical al centro del contenedor
+    -->
     <header class="fondo-oscuro flex-row flex-item-centrado">
+        <!--
+            Imagen con el logo definido por las siguientes clases:
+            .logo : Es la que le da las medidas que va a tener la imagen
+            .m1em : Para que tenga un margen de 1em en todas las direcciones
+        -->
         <img src="img/logo.png" alt="" class="logo m1em">
+
+        <!--
+            Menu de navegación con las opciones disponibles en la página. Se define con las siguientes clases:
+            .flex-grow : Puesto que esta dentro de un contenedor flex, esta clase indica que va a usar todo el espacio disponible sobrante.
+            .centrado : Para que este elemento quede centrado en su espacio
+            .m1em : Para que tenga un margen de 1em con todo lo que le rodee
+        -->
         <nav id="menu-navegacion" class="flex-grow centrado m1em">
+            <!-- 
+                Cada elemento "a" de este nav con id menu-navegacion, tendran, aparte del text-decoration:none de todos los elementos "a",
+                unos márgenes, tamaño y grosor de fuente definidos mediante css con el elemento "#menu-navegacion a"
+            -->
             <a href="#">Donde comer</a>
             <a href="#">Donde dormir</a>
             <a href="#">Donde curarte</a>
             <a href="#">Donde repostar</a>
             <a href="#">Donde divertirte</a>
         </nav>
+
+        <!--
+            Por último en este encabezado tenemos el botón para descargar el plano definido con las siguientes clases:
+            .boton : Es la que le da forma a todos los botones de la página
+            .fondo-claro : Para indicar cual es color de fondo de este botón en particular puesto que dicho color no va
+                           definido en la clase .boton
+            .m1em : Para que tenga un margen de 1em en todas las direcciones
+        -->
         <a href="#" class="boton fondo-claro m1em">Descargar plano</a>
     </header>
+
+    <!-- Parte principal de la página que tendra el contenido que va a ir encima del plano -->
     <main>
+        <!--
+            Enlace que representa el botón para activar o desactivar la caja que dice que capas se van a mostrar, definido con las siguientes clases:
+            .boton : Es la que le da forma a todos los botones de la página
+            .fondo-gris : Para indicar cual es color de fondo de este botón en particular puesto que dicho color no va
+                           definido en la clase .boton
+            .m1em : Para que tenga un margen de 1em en todas las direcciones
+        -->
         <a href="#" class="boton fondo-gris m1em">Mostrar/Ocultar capas</a>
-        <div class="caja-capas fondo-capas">
-            <p>Capas a mostrar</p>
+
+        <!--
+            Caja que se mostrará u ocultará dependiendo del botón que tiene encima. Definido con los siguientes elementos
+            #caja-capas : Con el id de este elemento se definen los bordes, redondeado de esquina, sombreado de la caja,
+                          color de fondo, tamaño y margenes con el resto de elementos
+        -->
+        <div id="caja-capas">
+            <!-- 
+                Título de la caja que por ser un elemento "p" contenido en un contenedor con el id caja-capas ya tiene definido
+                el tamaño, grosor y color de la fuente.
+                Aparte se usa la clase .centrado para centrarlo horizontalmente en el contenedor.
+            -->
+            <p class="centrado">Capas a mostrar</p>
+
+            <!-- Lista desordenada para las opciones de la caja de capas -->
+            <ul id="lista-capas">
+                <!--
+                    Cada elemento "li" contenido en el contenedor con id lista-capas tendrá una viñeta personalizada y
+                    un tamaño, grosor y color de fuente concretos.
+                -->
+                <li>Donde comer</li>
+                <li>Donde dormir</li>
+                <li>Donde curarte</li>
+                <li>Donde repostar</li>
+                <li>Donde divertirte</li>
+            </ul>
         </div>
     </main>
-    <footer class="fondo-oscuro flex-row">
+
+    <!--
+        Pie de pagina que va a estar fijo en la parte inferior por la etiqueta footer definida en css.
+        Como clases le asigno las siguientes:
+        .fondo-oscuro : Para que tenga el color que he definido con esa clase
+        .flex-row : Para que su contenido use flexbox con una distribución en linea
+        .flex-item-centrado : Para que el contenido se alinee de forma vertical al centro del contenedor
+    -->
+    <footer class="fondo-oscuro flex-row flex-item-centrado">
+        <!--
+            Parrafo contenido en el pie de página con los derechos reservados. Tiene las siguientes clases:
+            .flex-grow : Al estar dentro de un contenedor flex va a usar todo el espacio disponible.
+            .centrado : Para que esté centrado horizontalmente.
+            .derechos : Clase que indica el tamaño y color del texto del parrafo.
+        -->
         <p class="flex-grow centrado derechos">Zombies are coming - Todos los derechos reservados</p>
+
+        <!--
+            Contenedor para tener los tres iconos para las redes sociales. Esta dentro de un contenedor flex con orientacion en linea
+            y a su vez tambien va a ser un contenedor con las siguientes clases:
+            .flex-row : Para que su contenido use flexbox con una distribución en linea
+            .flex-item-centrado : Para que el contenido se alinee de forma vertical al centro del contenedor
+        -->
         <div class="flex-row flex-item-centrado">
-            <img src="img/facebook24.png" alt="" class="m1em">
-            <img src="img/twitter24.png" alt="" class="m1em">
-            <img src="img/instagram23.png" alt="" class="m1em">
+            <img src="img/facebook24.png" alt="Facebook" class="m1em">
+            <img src="img/twitter24.png" alt="Twitter" class="m1em">
+            <img src="img/instagram23.png" alt="Instagram" class="m1em">
         </div>
     </footer>
 </body>

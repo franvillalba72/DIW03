@@ -1,5 +1,18 @@
+/* 
+Importacion de la fuente utilizada para el diseño web desde google fonts en todas 
+las modalidades utilizadas en la página
+*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+/*
+Diseño del elemento body de la página en el que indico la fuente a usar en toda la página,
+la imagen de fondo que será el plano de Cartagena.
+Así mismo, indico que ese fondo va a estar centrado y va a utilizar todo el espacio disponible
+con el atributo background-size: cover.
+Finalmente le pongo un padding-top y padding-bottom para que todo lo que ponga en la página se
+separe de la parte de arriba y abajo puesto que el encabezado y el pie de página los he puesto
+fijos en la parte de arriba y abajo.
+*/
 body {
     font-family: 'Inter', sans-serif;
     background-image: url(../img/plano.png);
@@ -9,6 +22,7 @@ body {
     padding-bottom: 50px;
 }
 
+/* Encabezado puesto fijo en la parte de arriba de la página */
 header {
     position: absolute;
     top: 0;
@@ -16,6 +30,7 @@ header {
     width: 100%;
 }
 
+/* Pie de página puesto fijo en la parte baja de la página */
 footer {
     position: absolute;
     bottom: 0;
@@ -23,10 +38,15 @@ footer {
     width: 100%;
 }
 
+/* Indico que todos los enlaces (etiqueta a) no van a tener el subrayado típico del enlace*/
 a{
     text-decoration: none;
 }
 
+/* 
+Indico el color, tamaño y grosor de fuente y margenes que van a tener todos 
+los enlaces contenidos en el elemento con id menu-navegacion
+*/
 #menu-navegacion a {
     color: #fff;
     margin: 0 1em 0 1em;
@@ -34,6 +54,49 @@ a{
     font-weight: normal;
 }
 
+/*
+Defino el diseño que va a tener el elemento con id caja-capas que es la caja mostrada encima del mapa
+para que el usuario indique que capas quiere mostrar en el mapa.
+Aquí le indico el padding que va a tener dicha caja, que va a tener las esquinas redondeadas con border-radius,
+defino un sombreado para que tenga un poco de relieve con box-shadow y por último, su ancho y alto y el margen
+con el resto de los elementos de la página
+*/
+#caja-capas {
+    padding: 1em 2em;
+    border-radius: .3em;
+    box-shadow: 0.5em 0.5em 1.5em #1f313d;
+    width: 20em;
+    height: 30em;
+    margin: 2em 1em;
+    background-color: #e7e7e7;
+}
+
+/* Defino el tamaño, grosor y color del elemento p contenido en el elemento con id caja-capas */
+#caja-capas p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #525252;
+}
+
+/*
+Indico que todos los elementos li contenidos dentro del elemento con id lista-capas
+van a tener una viñeta personalizada con la imagen check.png, que van a tener un margen
+superior e inferior y tambien digo que tamaño de fuente y color van a tener
+*/
+#lista-capas li {
+    list-style-image: url(../img/check.png);
+    margin: 1em 0;
+    font-size: 24px;
+    color: #525252;
+}
+
+/*
+Diseño de todos los elementos con clase boton de la página. Se define el padding,
+los bordes redondeados, el color, tamaño, grosor de la fuente y el centrado
+del contenido del botón. 
+No se define el color del fondo puesto que en la página hay varios botones pero con
+distinto fondo así que solo defino lo que tienen en común
+*/
 .boton {
     padding: 1em 2em;
     border-radius: .3em;
@@ -43,56 +106,60 @@ a{
     text-align: center;
 }
 
-.caja-capas {
-    padding: 1em 2em;
-    border-radius: .3em;
-    box-shadow: 0.5em 0.5em 1.5em #1f313d;
-    width: 20em;
-    height: 30em;
-    margin: 2em 1em;
-}
-
+/*Clase para definir cual va a ser el tamaño del elemento que muestra el logotipo de la página*/
 .logo{
     width: 204px;
     height: 45px;
 }
 
+/*Clase para definir el tamaño y color de la fuente utilizada para los derechos de autor del pie de página*/
 .derechos {
     font-size: 14px;
     color: #fff;
 }
 
+/*Clase para ponerle un margen por todos los lados a cualquier elemento*/
 .m1em{
     margin: 1em;
 }
 
+/*Clase para centrar cualquier elemento sea de la clase que sea*/
 .centrado {
     text-align: center;
 }
 
-.flex-row{
+/*Clases para definir los elementos distribuidos usando flexbox*/
+.flex-row{ /* Define un elemento flex cuyo contenido va a distribuirse en fila*/
     display: flex;
     flex-direction: row;
 }
 
-.flex-col{
+.flex-col{ /* Define un elemento flex cuyo contenido va a distribuirse en columna*/
     display: flex;
     flex-direction: column;
 }
 
-.flex-grow{
+.flex-grow{ /* Define un elemento contenido en otro flex cuyo tamaño va a aumentar para ocupar el máximo espacio posible*/
     flex-grow: 1;
 }
 
 .flex-item-centrado
+/*
+Alinea de forma centrada todos los elementos de un contenedor flex. La alineacion sera vertical u horizontal
+dependiendo de si hemos usado flex-row o flex-col
+*/
 {
     align-items: center;
 }
 
-.flex-espaciado {
+.flex-espaciado { /* Distribuye los elementos contenidos en un contenedor flex */
     justify-content: space-around;
 }
 
+/*
+Clases para definir el color de una fuente y los colores de fondo para usar junto con otras clases
+que definan el resto de atributos de un elemento
+*/
 .texto-blanco{
     color: #fff;
 }
@@ -107,8 +174,4 @@ a{
 
 .fondo-gris{
     background-color: #aeb9c5;
-}
-
-.fondo-capas{
-    background-color: #e7e7e7;
 }
